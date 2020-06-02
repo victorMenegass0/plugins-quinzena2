@@ -43,10 +43,7 @@ $(document).on('click', '#barcode', function(){
    );
 })
 
-
-
-$(document).on('click', '#tcon' , function(){
-  function checkConnection() {
+function testarCon() {
     var networkState = navigator.connection.type;
 
     var states = {};
@@ -62,5 +59,6 @@ $(document).on('click', '#tcon' , function(){
     alert('Connection type: ' + states[networkState]);
 }
 
-checkConnection();
+$(document).on('click', '#tcon' , function(){
+testarCon();
 })
